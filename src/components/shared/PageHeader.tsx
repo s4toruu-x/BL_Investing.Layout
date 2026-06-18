@@ -24,7 +24,7 @@ const PageHeader: FC<{
           <button
             onClick={onHelp}
             aria-label={`How ${title} works`}
-            className="rounded-full p-1 text-gray-400 transition hover:bg-gray-100 hover:text-blue-600 dark:hover:bg-gray-800 dark:hover:text-blue-400"
+            className="cursor-pointer rounded-full p-1 text-gray-400 transition hover:bg-gray-100 hover:text-blue-600 dark:hover:bg-gray-800 dark:hover:text-blue-400"
           >
             <FaRegCircleQuestion className="text-lg" />
           </button>

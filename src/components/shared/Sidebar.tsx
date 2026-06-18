@@ -6,11 +6,17 @@ import BlueLockInvestingLogoLight from "../../assets/bl_investing_logo_light.png
 import BlueLockInvestingIconDark from "../../assets/bl_investing_icon_dark.png";
 import BlueLockInvestingIconLight from "../../assets/bl_investing_icon_light.png";
 import { ThemeToggle } from "./ThemeToggle";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaChartLine, FaCoins } from "react-icons/fa";
+import { MdBarChart } from "react-icons/md";
 import { FiChevronLeft, FiMenu, FiX } from "react-icons/fi";
 import { useDarkMode } from "../../hooks/useDarkMode";
 
-const navItems = [{ icon: FaHome, label: "Home", to: "/", end: true }];
+const navItems = [
+  { icon: FaHome, label: "Home", to: "/", end: true },
+  { icon: FaChartLine, label: "Stocks", to: "/stocks", end: false },
+  { icon: MdBarChart, label: "Charts", to: "/charts", end: false },
+  { icon: FaCoins, label: "Bets", to: "/bets", end: false },
+];
 
 const Sidebar: FC = () => {
   const { isDark } = useDarkMode();

@@ -1,4 +1,3 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 import { useRef, type FC } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -47,7 +46,7 @@ const DateRangePicker: FC<Props> = ({ value, onChange, className }) => {
           onClick={() =>
             openPicker(startRef as React.RefObject<HTMLInputElement>)
           }
-          className={`${formControl} flex items-center justify-between gap-3`}
+          className={`${formControl} flex items-center justify-between gap-3 cursor-pointer`}
         >
           <span
             className={`truncate ${!value.startDate ? "text-gray-400 dark:text-gray-500" : ""}`}
@@ -68,7 +67,7 @@ const DateRangePicker: FC<Props> = ({ value, onChange, className }) => {
           onClick={() =>
             openPicker(endRef as React.RefObject<HTMLInputElement>)
           }
-          className={`${formControl} flex items-center justify-between gap-3`}
+          className={`${formControl} flex items-center justify-between gap-3 cursor-pointer`}
         >
           <span
             className={`truncate ${!value.endDate ? "text-gray-400 dark:text-gray-500" : ""}`}
