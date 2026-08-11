@@ -9,11 +9,25 @@
 // Maps a stock id to its display name. Mirrors the original app's `stocksMap`.
 export const stocksMap: Record<string, string> = {
   apple: "Apple Inc.",
+  microsoft: "Microsoft Corp.",
+  alphabet: "Alphabet Inc.",
+  amazon: "Amazon.com Inc.",
+  meta: "Meta Platforms",
+  tesla: "Tesla Inc.",
+  nvidia: "NVIDIA Corp.",
+  netflix: "Netflix Inc.",
 };
 
 // Short ticker symbol per stock id.
 export const tickerMap: Record<string, string> = {
   apple: "AAPL",
+  microsoft: "MSFT",
+  alphabet: "GOOGL",
+  amazon: "AMZN",
+  meta: "META",
+  tesla: "TSLA",
+  nvidia: "NVDA",
+  netflix: "NFLX",
 };
 
 // Eagerly load every icon in the stock_icons folder, keyed by file path.
@@ -51,7 +65,16 @@ export type StockPricePoint = {
   price: number;
 };
 
-export const STOCKS: Stock[] = [{ id: "apple", price: 229.87, change: 1.24 }];
+export const STOCKS: Stock[] = [
+  { id: "apple", price: 229.87, change: 1.24 },
+  { id: "microsoft", price: 421.33, change: -0.68 },
+  { id: "alphabet", price: 178.42, change: 2.05 },
+  { id: "amazon", price: 186.9, change: 0.42 },
+  { id: "meta", price: 512.76, change: -1.37 },
+  { id: "tesla", price: 243.18, change: 3.11 },
+  { id: "nvidia", price: 124.55, change: -2.24 },
+  { id: "netflix", price: 649.02, change: 0.87 },
+];
 
 export const getStockById = (id: string): Stock | undefined =>
   STOCKS.find((s) => s.id === id);

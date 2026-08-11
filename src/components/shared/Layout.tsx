@@ -1,6 +1,7 @@
 import { useEffect, memo, type FC } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
+import { StockTicker } from "./StockTickerMarquee";
 import { useSidebar } from "../../hooks/useSidebar";
 
 const MemoOutlet = memo(() => <Outlet />);
@@ -22,6 +23,8 @@ const Layout: FC = () => {
           ml-0 ${collapsed ? "md:ml-[60px]" : "md:ml-56"}
         `}
       >
+        <StockTicker />
+
         <div className="flex-1 px-4 md:px-6 py-6 w-full max-w-[1400px] mx-auto">
           <MemoOutlet />
         </div>
